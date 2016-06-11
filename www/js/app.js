@@ -3,7 +3,7 @@ angular
 .module('attendance-app', ['ionic', 'ngCordova'])
 
 .constant('apiEndpoint',     {
-        'url': 'http://192.168.56.1:3000/mobileapi'
+        'url': 'http://localhost:3000/mobileapi'
 })
 
 .config(function ($stateProvider, $urlRouterProvider) {
