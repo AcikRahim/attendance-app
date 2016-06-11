@@ -1,0 +1,32 @@
+<ion-view view-title="Login">
+	<ion-content style="height: 100%; width: 100%; background-color: #393B3D">
+		<!-- <h4 style="color: white">Welcome !</h4>	 -->	
+		<div>
+			
+			<div style="text-align: center; margin-top: 30%; margin-bottom: 15%">
+				<img src="img/ionic.png">
+			</div>
+
+			<div>
+				<div class="list list-inset" style="margin: 0% 10%">
+					<form>
+						<label class="item item-input">
+							<input type="tel" placeholder="Matric Number" ng-model="userData.matric_no"></input>
+						</label>
+						<label class="item item-input">
+							<input type="password" placeholder="Password" ng-model="userData.password"></input>
+						</label>
+						<label class="item">
+                    		<button class="button button-block button-positive" ng-click="login()">Log In</button>
+                		</label>
+					</form>
+				</div>
+			</div>
+
+			<div style="text-align: center; margin-top: 10%">
+				<a style="text-decoration: none" href="#/first-time-user">First time user?</a>
+			</div>
+
+		</div>
+	</ion-content>
+</ion-view>

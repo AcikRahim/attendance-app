@@ -1,0 +1,41 @@
+<ion-view title="Opening/Closing">
+	<ion-content style="height: 100%; width: 100%; background-color: #393B3D">	
+
+		<div ng-repeat="event in eventsData" class="card">
+			<div class="item row item-divider" style="background-color: #FFE082">
+				<div class="col col-75">
+					{{ event.ename }}
+				</div>
+				<div class="col col-25">
+					{{ event.edate }}
+				</div>
+			</div>
+
+			<div class="item item-body">
+				<img class="full-image" style="width: 100%; height: 150px" ng-src="{{ event.photolink }}">
+			</div>
+
+			<div class="item item-text-wrap">
+				<p>Attendance taking at: {{ event.lname }}</p>
+			</div>
+
+			<label ng-if="event.status == 0" class="item item-text-wrap" style="padding: 0px 15px">
+				<button class="button button-block button-balanced" ng-click="startOpening(event.event_id)">Start opening</button>
+			</label>
+
+			<label ng-if="event.status == 1" class="item item-text-wrap" style="padding: 0px 15px">
+				<button class="button button-block button-balanced" ng-click="closeOpening(event.event_id)">Close opening</button>
+			</label>
+
+			<label ng-if="event.status == 2" class="item item-text-wrap" style="padding: 0px 15px">
+				<button class="button button-block button-assertive" ng-click="startClosing(event.event_id)">Start closing</button>
+			</label>
+
+			<label ng-if="event.status == 3" class="item item-text-wrap" style="padding: 0px 15px">
+				<button class="button button-block button-assertive" ng-click="closeClosing(event.event_id)">Close closing</button>
+			</label>
+
+		</div>
+
+	</ion-content>
+</ion-view>

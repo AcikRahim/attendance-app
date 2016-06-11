@@ -1,0 +1,23 @@
+<ion-view title="Get Feedback">
+
+    <ion-nav-buttons side="left">
+        <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+            <i class="icon ion-ios-arrow-back"> Back</i> 
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content style="height: 100%; width: 100%; background-color: #393B3D">
+    <div ng-if="feedbackData.length == 0" class="card">
+  			<div class="item item-text-wrap">
+    			No feedback yet. Be Patient
+  			</div>
+		</div>
+
+    	<div class="card" ng-repeat="feedback in feedbackData">
+  			<div class="item item-text-wrap">
+    			{{ feedback.feedback }}
+  			</div>
+		</div>
+	</ion-content>
+
+</ion-view>

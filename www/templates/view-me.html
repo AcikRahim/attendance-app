@@ -1,0 +1,34 @@
+<ion-view title="View Me">
+	<ion-content style="height: 100%; width: 100%; background-color: #393B3D" scroll="true">	
+
+		<div class="item" style="text-align: center; margin-bottom: 30px">
+      		<hr/>
+      		<h2>{{ profileData[0].sname }}</h2>
+      		<h2>{{ profileData[0].matric_no }}</h2>
+      		<h2>{{ profileData[0].faculty }}</h2>
+      		<h2>Merits: {{ totalMerit }} &nbsp;&nbsp; Event(s): {{  totalEvent }}</h2>
+      		<hr/>
+    	</div>
+
+		<div style="margin-top: 20px; background-color: #A5D6A7; margin: 0% 3%">
+			<div class="row" style="background-color: #2E7D32">
+				<div class="col col-60" style="">Event's Name</div>
+				<div class="col col-25" style="text-align: center">Position</div>
+				<div class="col col-15" style="text-align: center">Merits</div>
+			</div>
+
+			<hr/ style="margin: 0px 0px">
+			
+			<div ng-repeat="merit in meritsData">
+				<div class="row">
+					<div class="col col-60" style=" padding: 0px 0px">{{ merit.ename }}</div>
+					<div class="col col-25" style=" padding: 0px 0px; text-align: center">{{ merit.responsibility }}</div>
+					<div class="col col-15" style=" padding: 0px 0px; text-align: center">{{ merit.merit_point }}</div>
+				</div>
+				<hr/ style="margin: 0px 0px">
+			</div>			
+			
+		</div>
+
+	</ion-content>
+</ion-view>
